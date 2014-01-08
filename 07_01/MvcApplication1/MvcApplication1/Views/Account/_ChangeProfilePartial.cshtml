@@ -1,0 +1,31 @@
+﻿@model MvcApplication1.Models.LocalProfileModel
+
+@{
+    ViewBag.Title = "_ChangeProfilePartial";
+}
+
+<h2>_ChangeProfilePartial</h2>
+
+<h3>Смена имени</h3>
+
+@using (Html.BeginForm("Manage", "Account")) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+
+
+        <legend>Форма изменения имени</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.ActualName)
+                @Html.PasswordFor(m => m.ActualName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.NewName)
+                @Html.PasswordFor(m => m.NewName)
+            </li>
+        </ol>
+        <input type="submit" value="Change" />
+    </fieldset>
+}
