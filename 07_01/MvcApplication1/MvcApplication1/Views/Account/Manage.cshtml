@@ -21,15 +21,6 @@ else
     @Html.Partial("_SetPasswordPartial")
 }
 
-@if (ViewBag.HasLocalProfile)
-{
-    @Html.Partial("_ChangeProfilePartial")
-}
-else
-{ 
-    @Html.Partial("_SetProfilePartial")
-}
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

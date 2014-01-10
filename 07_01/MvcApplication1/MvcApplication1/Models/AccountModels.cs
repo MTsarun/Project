@@ -60,20 +60,7 @@ namespace MvcApplication1.Models
         public string ConfirmPassword { get; set; }
     }
 
-    public class LocalProfileModel
-    {
-        [Required]
-        [DataType(DataType.Name)]
-        [Display(Name = "Actual name")]
-        public string ActualName { get; set; }
 
-        [Required]
-        [DataType(DataType.Name)]
-        [Display(Name = "New name")]
-        public string NewName { get; set; }
-
-        
-    }
 
     public class LoginModel
     {
@@ -127,6 +114,26 @@ namespace MvcApplication1.Models
         [Required]
         [Display(Name = "Travelling")]
         public bool Travelling { get; set; }
+
+        [Required]
+        [Display(Name = "Dancing")]
+        public bool Dancing { get; set; }
+
+        [Required]
+        [Display(Name = "Fashion")]
+        public bool Fashion { get; set; }
+
+        [Required]
+        [Display(Name = "Cycling")]
+        public bool Cycling { get; set; }
+
+        [Required]
+        [Display(Name = "Skiing")]
+        public bool Skiing { get; set; }
+
+        [Required]
+        [Display(Name = "AboutMe")]
+        public string AboutMe { get; set; }
     }
 
 

@@ -37,14 +37,34 @@
             </li>
             <h4>Отметьте галочкой свои интересы.</h4> <br />
             <li>
-                @Html.LabelFor(m => m.Books)
-                @Html.CheckBoxFor(m => m.Books)
+                <table>
+                    <tr>
+                        <td>  @Html.LabelFor(m => m.Books)
+                            @Html.CheckBoxFor(m => m.Books) </td>
 
-                @Html.LabelFor(m => m.Movies)
-                @Html.CheckBoxFor(m => m.Movies)
+                        <td> @Html.LabelFor(m => m.Movies)
+                            @Html.CheckBoxFor(m => m.Movies) </td>
 
-                @Html.LabelFor(m => m.Travelling)
-                @Html.CheckBoxFor(m => m.Travelling)
+                        <td> @Html.LabelFor(m => m.Travelling)
+                            @Html.CheckBoxFor(m => m.Travelling) </td> 
+
+                        <td> @Html.LabelFor(m => m.Dancing)
+                            @Html.CheckBoxFor(m => m.Dancing) </td> 
+
+                        <td> @Html.LabelFor(m => m.Fashion)
+                            @Html.CheckBoxFor(m => m.Fashion) </td> 
+
+                        <td> @Html.LabelFor(m => m.Cycling)
+                            @Html.CheckBoxFor(m => m.Cycling) </td> 
+
+                        <td> @Html.LabelFor(m => m.Skiing)
+                            @Html.CheckBoxFor(m => m.Skiing) </td> 
+                    </tr> 
+                </table>
+            </li>
+             <li>
+                @Html.LabelFor(m => m.AboutMe)
+                @Html.TextAreaFor(m => m.AboutMe)
             </li>
          </ol>
         <input type="submit" value="Регистрация" />
