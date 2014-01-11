@@ -1,0 +1,46 @@
+﻿@model MvcApplication1.Models.Reception
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Reception</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NameReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameReception)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataReception)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AboutReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AboutReception)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TimeReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeReception)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

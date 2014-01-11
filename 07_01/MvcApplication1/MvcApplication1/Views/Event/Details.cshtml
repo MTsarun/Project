@@ -1,0 +1,43 @@
+﻿@model MvcApplication1.Models.Reception
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Reception</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NameReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameReception)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataReception)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AboutReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AboutReception)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TimeReception)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeReception)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

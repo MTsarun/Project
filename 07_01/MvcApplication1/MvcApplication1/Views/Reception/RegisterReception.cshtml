@@ -1,0 +1,41 @@
+﻿@model MvcApplication1.Models.RegisterReceptionModel
+@{
+    ViewBag.Title = "Регистрация события";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Создание нового события.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Форма создания события</legend>
+         <ol>
+            <li>
+                @Html.LabelFor(m => m.NameReception)
+                @Html.TextBoxFor(m => m.NameReception)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.DataReception)
+                @Html.TextBoxFor(m => m.DataReception)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.AboutReception)
+                @Html.TextBoxFor(m => m.AboutReception)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.TimeReception)
+                @Html.TextBoxFor(m => m.TimeReception)
+            </li>
+         </ol>
+        <input type="submit" value="Регистрация" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

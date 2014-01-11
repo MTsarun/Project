@@ -16,6 +16,8 @@ namespace MvcApplication1.Models
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Reception> Receptions { get; set; }
+
     }
 
     [Table("Users")]
