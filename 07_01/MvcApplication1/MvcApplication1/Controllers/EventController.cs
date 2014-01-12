@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcApplication1.Models;
+using WebMatrix.WebData;
+
+using MvcApplication1.Filters;
+
 
 namespace MvcApplication1.Controllers
 {
+    
      [Authorize]
+     [InitializeSimpleMembership]
     public class EventController : Controller
     {
         private UsersContext db = new UsersContext();
 
         //
         // GET: /Event/
+            
 
         public ActionResult Index()
         {
+            User user = db.Users.Find(WebSecurity.GetUserId(User.Identity.Name));
+            ViewBag.user = user;
+
             return View(db.Receptions.ToList());
         }
 

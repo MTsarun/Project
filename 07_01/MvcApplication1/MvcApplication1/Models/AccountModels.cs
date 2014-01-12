@@ -32,6 +32,10 @@ namespace MvcApplication1.Models
         public bool Books { get; set; }
         public bool Movies { get; set; }
         public bool Travelling { get; set; }
+        public bool Dancing { get; set; }
+        public bool Cycling { get; set; }
+        public bool Skiing { get; set; }
+        public string AboutMe { get; set; }
     }
 
     public class RegisterExternalLoginModel

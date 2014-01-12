@@ -4,16 +4,17 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Создание нового события</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>Reception</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.NameReception)
+          Название события
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.NameReception)
@@ -21,7 +22,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataReception)
+            Дата
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.DataReception)
@@ -29,7 +30,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AboutReception)
+         Описание
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.AboutReception)
@@ -37,61 +38,57 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.TimeReception)
+           Время
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.TimeReception)
             @Html.ValidationMessageFor(model => model.TimeReception)
         </div>
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Books)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Books)
-            @Html.ValidationMessageFor(model => model.Books)
-        </div>
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Movies)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Movies)
-            @Html.ValidationMessageFor(model => model.Movies)
-        </div>
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Travelling)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Travelling)
-            @Html.ValidationMessageFor(model => model.Travelling)
-        </div>
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Dancing)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Dancing)
-            @Html.ValidationMessageFor(model => model.Dancing)
-        </div>
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Cycling)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Cycling)
-            @Html.ValidationMessageFor(model => model.Cycling)
-        </div>
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Skiing)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Skiing)
-            @Html.ValidationMessageFor(model => model.Skiing)
-        </div>
+        <table>
+            <tr>
+                <td class="editor-label">
+                    @Html.LabelFor(model => model.Books)
 
+                    @Html.EditorFor(model => model.Books)
+                    @Html.ValidationMessageFor(model => model.Books)
+                </td>
+
+                <td class="editor-label">
+                    @Html.LabelFor(model => model.Movies)
+ 
+                    @Html.EditorFor(model => model.Movies)
+                    @Html.ValidationMessageFor(model => model.Movies)
+                </td>
+
+                <td class="editor-label">
+                    @Html.LabelFor(model => model.Travelling)
+
+                    @Html.EditorFor(model => model.Travelling)
+                    @Html.ValidationMessageFor(model => model.Travelling)
+                </td>
+
+                <td class="editor-label">
+                    @Html.LabelFor(model => model.Dancing)
+
+                    @Html.EditorFor(model => model.Dancing)
+                    @Html.ValidationMessageFor(model => model.Dancing)
+                </td>
+
+                <td class="editor-label">
+                    @Html.LabelFor(model => model.Cycling)
+
+                    @Html.EditorFor(model => model.Cycling)
+                    @Html.ValidationMessageFor(model => model.Cycling)
+                </td>
+
+                <td class="editor-label">
+                    @Html.LabelFor(model => model.Skiing)
+
+                    @Html.EditorFor(model => model.Skiing)
+                    @Html.ValidationMessageFor(model => model.Skiing)
+                </td>
+            </tr>
+        </table>
         <p>
             <input type="submit" value="Create" />
         </p>
