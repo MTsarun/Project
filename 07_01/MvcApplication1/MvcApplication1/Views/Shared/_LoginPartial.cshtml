@@ -2,7 +2,9 @@
     <text>
         Здравствуйте, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Управление" })!
         @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.ActionLink("Профиль", "Manage", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
             @Html.AntiForgeryToken()
+            @Html.ActionLink("Создать событие", "Create", "Event", routeValues: null, htmlAttributes: new { id = "registerLink" })
             <a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a>
         }
     </text>

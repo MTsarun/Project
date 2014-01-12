@@ -17,5 +17,11 @@ namespace MvcApplication1.Models
             public string DataReception { get; set; }
             public string AboutReception { get; set; }
             public int TimeReception { get; set; }
+            public bool Books { get; set; }
+            public bool Movies { get; set; }
+            public bool Travelling { get; set; }
+            public bool Dancing { get; set; }
+            public bool Cycling { get; set; }
+            public bool Skiing { get; set; }
         }
     }

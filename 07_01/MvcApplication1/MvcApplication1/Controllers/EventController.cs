@@ -9,6 +9,7 @@ using MvcApplication1.Models;
 
 namespace MvcApplication1.Controllers
 {
+     [Authorize]
     public class EventController : Controller
     {
         private UsersContext db = new UsersContext();

@@ -288,7 +288,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Reception\RegisterReception.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Event\Details.cshtml" />
     <Content Include="Views\Event\Create.cshtml" />

@@ -80,7 +80,7 @@ namespace MvcApplication1.Controllers
                 try
                 {
                     WebSecurity.CreateUserAndAccount(model.Email, model.Password,
-                        new {  Name = model.Name, Age = model.Age, Books = model.Books, Movies = model.Movies, Travelling = model.Travelling, Dancing = model.Dancing, Fashion = model.Fashion, Cycling = model.Cycling, Skiing = model.Skiing, AboutMe = model.AboutMe});
+                        new {  Name = model.Name, Age = model.Age, Books = model.Books, Movies = model.Movies, Travelling = model.Travelling, Dancing = model.Dancing, Cycling = model.Cycling, Skiing = model.Skiing, AboutMe = model.AboutMe});
 
                     WebSecurity.Login(model.Email, model.Password);
                     return RedirectToAction("Index", "Home");

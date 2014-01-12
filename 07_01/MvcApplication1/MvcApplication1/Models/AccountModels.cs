@@ -120,10 +120,7 @@ namespace MvcApplication1.Models
         [Required]
         [Display(Name = "Dancing")]
         public bool Dancing { get; set; }
-
-        [Required]
-        [Display(Name = "Fashion")]
-        public bool Fashion { get; set; }
+        
 
         [Required]
         [Display(Name = "Cycling")]
